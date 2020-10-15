@@ -1,0 +1,11 @@
+
+{
+    
+    "name": "Lar das Crianças 3",
+    "latitude": -31.6998733,
+    "longitude": -52.3338846,
+    "about": "Sobre o orphanages",
+    "instructions": "venha visitar",
+    "opening_hours": "Das 8h até 18h",
+    "open_on_weekends": true,
+}
