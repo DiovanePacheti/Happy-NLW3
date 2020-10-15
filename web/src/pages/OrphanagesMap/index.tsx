@@ -50,8 +50,8 @@ const OrphanagesMap:React.FC = () =>{
                             orphanagesData.map((orphanageItem: OrphanagenInterface) =>{
                                 return(
                                     <Marker 
-                                        position={[orphanageItem.latitude, orphanageItem.longitude]}
                                         icon={mapIcon}
+                                        position={[orphanageItem.latitude, orphanageItem.longitude]}
                                         // position={[-31.7232386, -52.3294214]}
                                         key={orphanageItem.id}
                                     >   
