@@ -40,7 +40,7 @@ const OrphanagesMap:React.FC = () =>{
                 <Mapa>
                     <Map 
                         center={[-31.7300645,-52.3401932]}
-                        zoom={15}
+                        zoom={12}
                         style={{width:'100%', height:'100%'}}
                     >
                         <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />

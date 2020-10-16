@@ -34,7 +34,7 @@ export default function CreateOrphanage() {
   const [orphanagesCreateForm, setOrphanagesCreateForm] = useState<InterfaceInputOrphanages>({} as InterfaceInputOrphanages);
 
   function handleMapClick(e: LeafletMouseEvent){
-    // console.log(e.latlng)
+     console.log(e.latlng)
     const { 
       lat,
       lng 
@@ -108,7 +108,7 @@ export default function CreateOrphanage() {
     
     alert('Cadastro realizado com sucesso !');
 
-    history.push('/app')
+    // history.push('/app')
     
   }
 
@@ -122,7 +122,7 @@ export default function CreateOrphanage() {
             <legend>Dados</legend>
 
             <Map 
-              center={[-27.2092052,-49.6401092]} 
+              center={[-31.7232386,-52.3294214]} 
               style={{ width: '100%', height: 280 }}
               zoom={15}
               onClick={handleMapClick}

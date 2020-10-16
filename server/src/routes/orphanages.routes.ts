@@ -37,7 +37,7 @@ orphanagesRoutes.post('/', upload.array('images') , async(req:Request, res:Respo
         about,
         instructions,
         opening_hours,
-        open_on_weekends,
+        open_on_weekends: open_on_weekends === 'true',
         // open_on_weekends: JSON.parse(open_on_weekends), talves tenha que utilizar para capturar o valor boolean
         images
     }
@@ -54,6 +54,7 @@ orphanagesRoutes.post('/', upload.array('images') , async(req:Request, res:Respo
             path: Yup.string().required()
         }))
     });
+
 
     await schema.validate(data, {
         abortEarly:false,
