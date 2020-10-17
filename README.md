@@ -1,7 +1,7 @@
 
 # _NLW-3_Happy_
 
-![](assets/landing.png)
+![](assets/landing.png)![](assets/landingMobile.png)
 
 ## Como Executar
 
