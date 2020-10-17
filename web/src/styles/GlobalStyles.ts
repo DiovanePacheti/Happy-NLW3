@@ -7,10 +7,16 @@ export default createGlobalStyle`
         box-sizing:border-box;
     }
 
-    body{
+    body,html{
         color:#fff;
         background:#ebf2f5;
+        width:100vw;
     }
+
+    *,button,input{
+        border:0;
+        outline:0;
+    }    
 
     body,
     input,

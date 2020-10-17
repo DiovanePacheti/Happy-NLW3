@@ -27,6 +27,14 @@ export const PageMap = styled.div`
         }
         
     }
+
+    @media(max-width:375px){
+        aside{
+            display:none;
+        }
+    }
+
+    
 `;
 
 export const Footer = styled.footer`

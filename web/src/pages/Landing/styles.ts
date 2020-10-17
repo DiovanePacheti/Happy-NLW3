@@ -10,6 +10,7 @@ export const PageLanding = styled.div`
     height:100vh;
     background:var(--color-background-degrade);
 
+
 `;
 export const ContentWapper = styled.div`
     position:relative;
@@ -24,6 +25,16 @@ export const ContentWapper = styled.div`
     justify-content:space-between;
     background:url(${BackgroundLanding}) no-repeat 80% center;
     background-size: 453px;
+    
+    @media(max-width:375px){
+        background-size:253px;
+        width:90%;
+        justify-content:start;
+        >img{
+            width:50%;
+            
+        }
+    }
     
 `;
 
@@ -40,6 +51,19 @@ export const Main = styled.div`
         margin-top:48px;
         font-size:24px;
         line-height:34px;
+    }
+
+    @media(max-width:375px){
+        >h1{
+            margin-top:98px;
+            font-size:56px;
+            font-weight:900;
+            line-height:50px;
+        }
+        p{
+        font-size:24px;
+        line-height:34px;
+    }
     }
 `;
 
@@ -58,6 +82,11 @@ export const Location = styled.div`
 
     >strong{
         font-weight:800;
+    }
+
+    @media(max-width:375px){
+        font-size:16px;
+        line-height:24px;
     }
 
 `;
@@ -82,6 +111,10 @@ export const EnterApp = styled.div`
     &:hover{
         background:var(--color-light-blue);
     }
+
+    @media(max-width:375px){
+        width:100%;
+    }
 `;
 
 export const IconFiArrowRight = styled(FiArrowRight)`
@@ -89,4 +122,5 @@ export const IconFiArrowRight = styled(FiArrowRight)`
     width:32px;
     height:32px;
     color:var(--color-opacity-dark);
+    
 `;

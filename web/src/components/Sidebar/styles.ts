@@ -14,6 +14,13 @@ export const AppSidebar = styled.aside`
     >img{
         width: 48px;
     }
+
+    @media(max-width:375px){
+        width:10%;
+        height:100vh;
+        padding: 22px 14px;
+        display:none;
+    }
 `;
 
 export const Footer =styled.footer`

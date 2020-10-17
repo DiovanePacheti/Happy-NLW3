@@ -2,11 +2,17 @@ import React, { ChangeEvent, FormEvent, useCallback, useState } from "react";
 import { Map, Marker, TileLayer } from 'react-leaflet';
 import {LeafletMouseEvent}from 'leaflet' //importando o LeafletMouseEvent como interface do event no click do mouse do mapa
 import { FiPlus } from "react-icons/fi";
-import './styles.css';
+import { 
+  PageCreateOrphanage,
+  Main,
+  CreateOrphanageForm,
+  Fieldset 
+} from './styles'
 import Sidebar from "../../components/Sidebar";
 import { mapIcon } from "../../styles/Icons";
 import api from "../../services/api";
 import { useHistory } from "react-router-dom";
+
 
 interface InterfaceInputOrphanages{
   name:string;
@@ -104,7 +110,7 @@ export default function CreateOrphanage() {
     })
     
     
-    await api.post('orphanages', data)
+    // await api.post('orphanages', data)
     
     alert('Cadastro realizado com sucesso !');
 
@@ -113,12 +119,12 @@ export default function CreateOrphanage() {
   }
 
   return (
-    <div id="page-create-orphanage">
+    <PageCreateOrphanage >
       <Sidebar />
 
-      <main>
-        <form className="create-orphanage-form" onSubmit={handleSubmit}>
-          <fieldset>
+      <Main>
+        <CreateOrphanageForm onSubmit={handleSubmit}>
+          <Fieldset>
             <legend>Dados</legend>
 
             <Map 
@@ -128,8 +134,8 @@ export default function CreateOrphanage() {
               onClick={handleMapClick}
             >
               {/* <TileLayer 
-                url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
-              /> */}
+                 url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+               />  */}
               <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
               {
                 position.latitude !== 0 
@@ -168,9 +174,9 @@ export default function CreateOrphanage() {
               </div>
               <input multiple onChange={handleSeletImages} type="file" id="image[]" />
             </div>
-          </fieldset>
+          </Fieldset>
 
-          <fieldset>
+          <Fieldset>
             <legend>Visitação</legend>
 
             <div className="input-block">
@@ -199,14 +205,14 @@ export default function CreateOrphanage() {
                 >Não</button>
               </div>
             </div>
-          </fieldset>
+          </Fieldset>
 
           <button className="confirm-button" type="submit">
             Confirmar
           </button>
-        </form>
-      </main>
-    </div>
+        </CreateOrphanageForm>
+      </Main>
+    </PageCreateOrphanage>
   );
 }
 
