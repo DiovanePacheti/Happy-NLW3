@@ -1,6 +1,7 @@
 
 # _NLW-3_Happy_
 
+
 ![](assets/landing.png)![](assets/landingMobile.png)
 
 ## Como Executar
@@ -10,16 +11,9 @@
 # Web:
 
 - execute: `yarn start`
-1. Pages
+
 
 >Landing;
 
 # Server
 - execute: `yarn dev`
-- Tecnologias
-
-> nodejs
-
-> Typescrips
-
-> Express

@@ -1,5 +1,7 @@
 # _NLW-3_Happy_
 
+![](../assets/landing.png)
+
 ## Como Executar
 - execute: `yarn start`
 
